@@ -1,0 +1,1 @@
+../../Github/linux-workspace/kitty/.config/kitty/set-kitty-color-scheme.py
