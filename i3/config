@@ -23,7 +23,7 @@ font pango:Hack Nerd Font 10
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
+exec --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.png
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -320,7 +320,7 @@ bindsym --release $sup+Print exec $HOME/.homemade/bin/system/take-screenshot-w-i
 bindsym --release $sup+Shift+Print exec flameshot gui
 bindsym $sup+Ctrl+Print exec kazam
 # Reset wallpaper
-bindsym $sup+Ctrl+w exec feh --bg-fill $HOME/.config/i3/wallpaper.png
+bindsym $sup+Ctrl+w exec feh --bg-fill $HOME/.config/i3/wallpaper2.png
 # Refresh Dual monitor
 bindsym $sup+Ctrl+m exec xrandr --output HDMI-0 --left-of eDP --auto
 # Refresh Single monitor
@@ -344,8 +344,10 @@ exec --no-startup-id $HOME/.homemade/bin/system/set-custom-hardware-settings
 # Software
 # Dual monitor
 exec xrandr --output HDMI-0 --left-of eDP --auto
+#Discord
+exec discord
 # Wallpaper
-exec feh --bg-fill $HOME/.homemade/assets/wallpaper/nezuko-3.2.jpg
+exec feh --bg-fill $HOME/.config/i3/wallpaper.png
 # Compositor
 exec --no-startup-id picom
 # Notifications
